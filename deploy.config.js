@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'gadget-gallery', // Format JCWD-{batchcode}-{groupnumber}
+      name: 'gadget-gallery-api', // Format JCWD-{batchcode}-{groupnumber}
       script: './projects/server/src/index.js',
       env: {
         NODE_ENV: process.env.NODE_ENV || 'production',
@@ -24,7 +24,7 @@ module.exports = {
         Googlemaps_api_key:
           process.env.Googlemaps_api_key ||
           'AIzaSyD0BznkOcWn2BonYVT94uhlkwz1DycFjxg',
-        URL: process.env.URL || 'https://jcwd030601.netlify.app/',
+        URL: process.env.URL || 'https://gadget-gallery-fe.vercel.app/',
         REDIS_URL: process.env.REDIS_URL || 'redis://localhost:6379',
       },
       time: true,
