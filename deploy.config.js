@@ -1,18 +1,18 @@
 module.exports = {
   apps: [
     {
-      name: "JCWD-0306-01", // Format JCWD-{batchcode}-{groupnumber}
-      script: "./projects/server/src/index.js",
+      name: 'gadget-gallery', // Format JCWD-{batchcode}-{groupnumber}
+      script: './projects/server/src/index.js',
       env: {
         NODE_ENV: process.env.NODE_ENV || 'production',
-        PORT: process.env.PORT || 8001,
-        MYSQL_USER: process.env.MYSQL_USER || 'jcwd030601',
-        MYSQL_PASSWORD: process.env.MYSQL_PASSWORD || 'jcwd030601',
-        MYSQL_DATABASE: process.env.MYSQL_DATABASE || 'jcwd030601',
-        MYSQL_HOST: process.env.MYSQL_HOST || 'adminer2.purwadhikabootcamp.com',
+        PORT: process.env.PORT,
+        MYSQL_USER: process.env.MYSQL_USER,
+        MYSQL_PASSWORD: process.env.MYSQL_PASSWORD,
+        MYSQL_DATABASE: process.env.MYSQL_DATABASE,
+        MYSQL_HOST: process.env.MYSQL_HOST,
         MYSQL_DIALECT: process.env.MYSQL_DIALECT || 'mysql',
         MYSQL_TIMEZONE: process.env.MYSQL_TIMEZONE || '+07:00',
-        JWT_SECRET_KEY: process.env.JWT_SECRET_KEY || 'RAHASIA',
+        JWT_SECRET_KEY: process.env.JWT_SECRET_KEY,
         nodemailer_email:
           process.env.nodemailer_email || 'gadgetgallerygroup2@gmail.com',
         nodemailer_password:
