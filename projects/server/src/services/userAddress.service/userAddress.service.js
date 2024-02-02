@@ -63,6 +63,7 @@ class UserAddress extends Service {
       body: JSON.stringify(body),
     });
     const result = await response.json();
+    console.log(result);
     return findTheSmallestDuration(result, destination);
   };
 

@@ -103,6 +103,11 @@ class Cart extends Service {
       const [data, isCreated] = await this.db.findOrCreate({
         where: { userId, productId },
         defaults: { userId, productId, quantity, note },
+        include: {
+          model: db.Product,
+          paranoid: false,
+          include: { model: db.ProductImage, attributes: ['id'] },
+        },
         transaction: t,
       });
       if (!isCreated) {
@@ -120,7 +125,6 @@ class Cart extends Service {
       }
       await data.reload({
         where: { userId, productId },
-        ...this.optionAttributeAndInclude,
         transaction: t,
       });
       return data;
